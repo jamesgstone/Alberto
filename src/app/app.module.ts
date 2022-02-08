@@ -6,12 +6,32 @@ import { AppComponent } from './app.component';
 import { RegisterComponent } from './components/register/register.component';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
+import { HeaderComponent } from './components/header/header.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
+import { StoreInfoComponent } from './components/store-info/store-info.component';
+import { ProductsComponent } from './components/products/products.component';
+import { SingleProductsComponent } from './components/single-products/single-products.component';
+import { CartComponent } from './components/cart/cart.component';
+import { CartItemComponent } from './components/cart-item/cart-item.component';
+import { CategoriesComponent } from './components/categories/categories.component';
+import { ContainerComponent } from './components/container/container.component';
+import { OrderComponent } from './components/order/order.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		RegisterComponent,
-  LoginComponent
+  LoginComponent,
+  HeaderComponent,
+  AboutUsComponent,
+  StoreInfoComponent,
+  ProductsComponent,
+  SingleProductsComponent,
+  CartComponent,
+  CartItemComponent,
+  CategoriesComponent,
+  ContainerComponent,
+  OrderComponent
 	],
 	imports: [
 		BrowserModule,
