@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './components/register/register.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
@@ -16,7 +16,11 @@ import { CartItemComponent } from './components/cart-item/cart-item.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { ContainerComponent } from './components/container/container.component';
 import { OrderComponent } from './components/order/order.component';
+
+// inputs
 import { InputTextModule } from "primeng/inputtext";
+import {ButtonModule} from 'primeng/button';
+import {MessageModule} from 'primeng/message';
 
 @NgModule({
 	declarations: [
@@ -34,7 +38,7 @@ import { InputTextModule } from "primeng/inputtext";
 		ContainerComponent,
 		OrderComponent,
 	],
-	imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, InputTextModule],
+	imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, HttpClientModule, InputTextModule, ButtonModule, MessageModule],
 	providers: [],
 	bootstrap: [AppComponent],
 })
