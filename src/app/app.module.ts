@@ -18,29 +18,23 @@ import { ContainerComponent } from './components/container/container.component';
 import { OrderComponent } from './components/order/order.component';
 
 @NgModule({
-	declarations: [
-		AppComponent,
-		RegisterComponent,
-  LoginComponent,
-  HeaderComponent,
-  AboutUsComponent,
-  StoreInfoComponent,
-  ProductsComponent,
-  SingleProductsComponent,
-  CartComponent,
-  CartItemComponent,
-  CategoriesComponent,
-  ContainerComponent,
-  OrderComponent
-	],
-	imports: [
-		BrowserModule,
-		AppRoutingModule,
-		FormsModule,
-    HttpClientModule
-
-	],
-	providers: [],
-	bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    RegisterComponent,
+    LoginComponent,
+    HeaderComponent,
+    AboutUsComponent,
+    StoreInfoComponent,
+    ProductsComponent,
+    SingleProductsComponent,
+    CartComponent,
+    CartItemComponent,
+    CategoriesComponent,
+    ContainerComponent,
+    OrderComponent,
+  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  providers: [],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
