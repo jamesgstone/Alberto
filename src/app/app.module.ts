@@ -16,25 +16,26 @@ import { CartItemComponent } from './components/cart-item/cart-item.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { ContainerComponent } from './components/container/container.component';
 import { OrderComponent } from './components/order/order.component';
+import { InputTextModule } from "primeng/inputtext";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    RegisterComponent,
-    LoginComponent,
-    HeaderComponent,
-    AboutUsComponent,
-    StoreInfoComponent,
-    ProductsComponent,
-    SingleProductsComponent,
-    CartComponent,
-    CartItemComponent,
-    CategoriesComponent,
-    ContainerComponent,
-    OrderComponent,
-  ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
-  providers: [],
-  bootstrap: [AppComponent],
+	declarations: [
+		AppComponent,
+		RegisterComponent,
+		LoginComponent,
+		HeaderComponent,
+		AboutUsComponent,
+		StoreInfoComponent,
+		ProductsComponent,
+		SingleProductsComponent,
+		CartComponent,
+		CartItemComponent,
+		CategoriesComponent,
+		ContainerComponent,
+		OrderComponent,
+	],
+	imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, InputTextModule],
+	providers: [],
+	bootstrap: [AppComponent],
 })
 export class AppModule {}

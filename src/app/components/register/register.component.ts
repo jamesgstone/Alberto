@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { InputTextModule } from 'primeng/inputtext';
 
 //models
 import { RegistrationForm } from '../../models/registration-form'
