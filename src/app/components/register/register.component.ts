@@ -51,12 +51,29 @@ export class RegisterComponent implements OnInit {
 		return this.regForm.get('id')?.invalid || this.regForm.get('email')?.invalid || this.regForm.get('password')?.invalid || this.regForm.get('passwordConfirmation')?.invalid
 	}
 
-	goStep1(): void {
+	get() {
+		return new Promise<boolean>((resolve) => {
+			const id = this.regForm.get('id')?.value;
+			console.log("ID",id)
+			//do fetch here
+			setTimeout(() => {
+				resolve(false)
+			},2000)
+		})
+	}
+
+
+	goStep1() {
 		this.step = 1;
 	}
 
-	goStep2(): void {
-		this.step = 2;
+	async goStep2() {
+		const proceed = await this.get()
+		if(proceed) {
+			this.step = 2;
+		} else {
+			alert("id present")
+		}
 	}
 
 	register() {
