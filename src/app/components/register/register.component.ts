@@ -12,7 +12,7 @@ import { RegistrationForm } from '../../models/registration-form'
 
 export class RegisterComponent implements OnInit {
 
-	regForm:FormGroup;
+	regForm:FormGroup 
 	step:number
 
 	constructor(private fb: FormBuilder) {
@@ -42,7 +42,7 @@ export class RegisterComponent implements OnInit {
 			}
 		});
 	}
-	
+
 	ngOnInit(): void {
 
 	}

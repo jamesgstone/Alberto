@@ -12,6 +12,7 @@ export class ContainerComponent implements OnInit {
 
   ngOnInit(): void {
     this._products.getproducts()
+    this._categories.getCategories()
   }
 
 }
