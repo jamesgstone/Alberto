@@ -1,24 +1,23 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, Router } from '@angular/router';
-import store from '../redux/store';
-import { NotifyService } from './notify.service';
 
-@Injectable({
-    providedIn: 'root'
-})
 
-export class AdminGuard implements CanActivate {
+// @Injectable({
+//     providedIn: 'root'
+// })
 
-    public constructor(private notify: NotifyService, private myRouter: Router) { }
+// export class AdminGuard implements CanActivate {
 
-    public canActivate(): boolean {
+//     public constructor(private myRouter: Router) { }
 
-        if (store.getState().authState.user?.isAdmin)
-            return true;
+//     public canActivate(): boolean {
 
-        this.notify.error("Access restricted to Administors Only!");
-        this.myRouter.navigateByUrl("/home");
-        return false;
-    }
+//         if (store.getState().authState.user?.isAdmin)
+//             return true;
 
-}
+//         this.notify.error("Access restricted to Administors Only!");
+//         this.myRouter.navigateByUrl("/home");
+//         return false;
+//     }
+
+// }

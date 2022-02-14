@@ -15,7 +15,7 @@ class ProductModel {
         myFormData.append("name", product.name);
         myFormData.append("price", product.price.toString());
         myFormData.append("categoryId", product.categoryId);
-        myFormData.append("imageName", product.imageName); 
+        myFormData.append("imageName", product.imageName);
         if(product.image) myFormData.append("image", product.image.item(0));
         return myFormData;
     }

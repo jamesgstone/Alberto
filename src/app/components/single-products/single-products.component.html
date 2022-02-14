@@ -1,1 +1,15 @@
-<p>single-products works!</p>
+<div class="frame">
+  <div class="pic">
+    <img src="{{ product?.imgUrl }}" alt="pruduct image" />
+  </div>
+  <div class="pInfo">
+    <h1>{{product?.prodName}}</h1>
+    <h2>{{product?.price}}</h2>
+  </div>
+  <div class="quantity">
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" name="quantity" min="1" />
+    <br />
+    <input type="submit" value="Add to cart" />
+  </div>
+</div>

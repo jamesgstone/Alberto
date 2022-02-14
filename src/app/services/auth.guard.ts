@@ -1,23 +1,22 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, Router } from '@angular/router';
-import store from '../redux/store';
-import { NotifyService } from './notify.service';
 
-@Injectable({
-    providedIn: 'root'
-})
-export class AuthGuard implements CanActivate {
 
-    public constructor(private notify: NotifyService, private myRouter: Router) { }
+// @Injectable({
+//     providedIn: 'root'
+// })
+// export class AuthGuard implements CanActivate {
 
-    public canActivate(): boolean {
+//     public constructor(private myRouter: Router) { }
 
-        if (store.getState().authState.user)
-            return true;
+//     public canActivate(): boolean {
 
-        this.notify.error("You Must Login To access this page");
-        this.myRouter.navigateByUrl("/home");
-        return false;
-    }
+//         if (store.getState().authState.user)
+//             return true;
 
-}
+//         this.notify.error("You Must Login To access this page");
+//         this.myRouter.navigateByUrl("/home");
+//         return false;
+//     }
+
+// }

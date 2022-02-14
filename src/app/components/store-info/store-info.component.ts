@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./store-info.component.scss']
 })
 export class StoreInfoComponent implements OnInit {
+  public imageUrl:string = '../../../assets/images/scotch-whisky-experience.jpg';
+  public storeOrders:Number = 12;
+  public storeProducts:Number = 30;
+
 
   constructor() { }
 
