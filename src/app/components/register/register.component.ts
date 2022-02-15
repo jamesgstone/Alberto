@@ -12,7 +12,7 @@ import { RegistrationForm } from '../../models/registration-form'
 
 export class RegisterComponent implements OnInit {
 
-	regForm:FormGroup 
+	regForm:FormGroup
 	step:number
 
 	constructor(private fb: FormBuilder) {
@@ -51,15 +51,16 @@ export class RegisterComponent implements OnInit {
 		return this.regForm.get('id')?.invalid || this.regForm.get('email')?.invalid || this.regForm.get('password')?.invalid || this.regForm.get('passwordConfirmation')?.invalid
 	}
 
-	get() {
+  async getproducts(){
 		return new Promise<boolean>((resolve) => {
 			const id = this.regForm.get('id')?.value;
 			console.log("ID",id)
-			//do fetch here
-			setTimeout(() => {
-				resolve(false)
-			},2000)
-		})
+        const res = await fetch('http://localhost:1000/users/${id}')
+
+        const data = await res.json()
+        console.log(data)
+        this.productsArr = data
+      }
 	}
 
 

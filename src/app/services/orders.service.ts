@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import OrderModel from '../models/order.model';
 import { lastOrderAction, orderAddedAction, ordersDownloadedAction } from '../redux/orders-state';
-import store from '../redux/store';
+
 
 @Injectable({
     providedIn: 'root'
@@ -17,7 +17,7 @@ export class OrdersService {
             const lastOrder = await this.http.get<OrderModel>(environment.orderUrl + _id).toPromise();
             store.dispatch(lastOrderAction(lastOrder));
         }
-        return store.getState().orderState.lastOrder; 
+        return store.getState().orderState.lastOrder;
     }
 
     public async getAllOrders() {
