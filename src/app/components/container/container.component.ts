@@ -8,7 +8,7 @@ import { productsService } from 'app/services/products.service';
 })
 export class ContainerComponent implements OnInit {
 
-  constructor( public _products:productsService) { }
+  constructor( public _products:productsService, public _categories:productsService) { }
 
   ngOnInit(): void {
     this._products.getproducts()
